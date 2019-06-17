@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    <head>
+        <!--Etiquetas con atributos poco usados-->
+        <meta name="author" content="Daniel E Diaz">
+        <meta name="description" content="Formulario de correo para practicar
+        Html, Css y Js en la optativa de app web"/>
+        <meta name="resource-type" content="Correo"/>
+        <meta name="DateCreated" content="Sat,6 April 2019 20:42:00 GMT-2"/>
+        <!--Para los robots-->
+        <meta name="Revisit-after" content="2 days"/>
+       
+        
+
+        <meta charset="UTF-8"/>
+        <!--<meta http-equiv="refresh" content="30"/>-->
+        <title>Cool Mensaje</title>
+        
+        <link rel="stylesheet" href="css/estilos.css" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300" type="text/css" />
+        <!--Aunque la etiqueta script se puede usar para muchas cosas, principalmente 
+        se utiliza para incluir código javascript, por lo tanto HTML5 entiende que,
+        si no se dice nada, el script va a cargar código javascript.
+        Así pues, no necesitamos usar el atributo type si vamos a cargar
+         javascript!        ( type="text/javascript" )-->
+         <script src="js/validar.js"></script>
+         
+    </head>
+    
+    <body>
+        <h1>Pure CSS3 Animated Gradient Background
+            <br/>and mailto, by Daniel
+        </h1>
+        <h3>Transmitir e-mail a alguien@ejemplo.com:</h3>    
+        
+        <div class="box" id="form1"> 
+            <h2>Contactanos</h2>    
+            
+            <form action="mailto: alguien@ejemplo.com" method="POST" 
+             enctype="text/plain">
+                <div>
+                    
+                    <input type="text" name="nombre" title="Nombre Completo" required/>
+                    <label>Nombre</label>
+                </div>
+                <div>
+                    
+                    <input id="email"  type="text" name="mail"
+                    pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_])*[.][a-z]{1,5}" required/>
+                    <label>Email html</label>
+                </div>
+                <div>
+                    
+                    <input id="email"  type="text" name="mail" required/>
+                    <label>Email js</label>
+                </div>
+                <div>
+            
+                    <!--Si coloco el atributo [value="mensaje"] ya queda inicializado
+                    con valor de mensaje igual a "mensaje"
+                    Coloco <br/> para hacer un espacio como salto de linea, pero eso se puede reemplazar por un margin-bottom
+                    Borré los placeholder xq se interponian con el efecto de los labels -->
+                    <input type="textbox" name="mensaje" title="Tu
+                    mensaje"  required/>
+                    <label>Mensaje</label>
+                    
+                    
+                </div>
+
+                    <input class="btn" type="submit" value="Enviar">
+                    <input class="btn" type="reset" value="Resetear">
+                
+            </form>
+
+        </div> 
+       
+    </body>
+    
+    <footer>
+
+    </footer>
+</html>
+<!-- fondo video de youtube
+     si el mouse se mueve, se sensura y sale un cartel preguntando si desea enviar un correo
+     mientras escribe el correo, se sensura el video con un layer
+     si el mouse esta fuera del div del form, se ve el video-->

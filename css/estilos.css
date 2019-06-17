@@ -1,0 +1,174 @@
+body {
+	font-family: 'Open Sans';
+	width: 100wh;
+	height: 90vh;
+	color: #fff;
+	background: linear-gradient(-45deg, #EE7752, #5C1258, #23D5AB, #23A6D5);
+	background-size: 400% 400%;
+	-webkit-animation: Gradient 15s ease infinite;
+	-moz-animation: Gradient 15s ease infinite;
+	animation: Gradient 15s ease infinite;
+}
+
+@-webkit-keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+@-moz-keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+@keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+h1, h6 {
+	font-weight: 300;
+	text-align: center;
+	position: absolute;
+	top: 65%;
+	right: 0;
+	left: 25%;
+}
+
+.box{
+	position: absolute;
+	top: 50%;
+	left: 20%;
+	transform: translate(-50%, -50%);
+	width: 400px;
+	/*background: rgba(255, 160, 122, 1);*/
+	background: #fff;
+	padding: 40px;
+	box-sizing: border-box;
+	border: 2.5px solid rgba(253, 228, 3, 0.1);
+	border-radius: 1.2%;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.8);
+}
+
+.box h2{
+	font-weight: 1;
+	margin: 0 0 40px;
+	padding: 0;
+	color: #7b1fa2;
+	text-transform: uppercase;
+}
+
+.box input{
+	padding: 10px 0;
+	margin-bottom: 30px;
+	width: 100%;
+	box-sizing: border-box;
+	box-shadow: none;
+	outline: none;
+	border: none;
+	border-bottom: 2px solid #999;
+	caret-color: #23D5AB;
+	color: #23D5AB;
+}
+.box input[type="submit"]{
+	/*border-bottom: none;*/
+	cursor: pointer;
+	background: #FF9800;
+	color: #fff;
+	margin-bottom: 0;
+	text-transform: uppercase;
+	margin-bottom: 5px;
+}
+.box input[type="reset"]{
+	/*border-bottom: none;*/
+	cursor: pointer;
+	background: #E73C7E;
+	color: #fff;
+	margin-bottom: 0;
+	text-transform: uppercase;
+}
+
+.box form div{
+	position: relative;	
+}
+
+.box form div label{
+	color: #999;
+	position: absolute;
+	top: 10px;
+	left: 0.5%;
+	pointer-events: none;
+	transition: .5s;
+}
+.box input:focus ~ label,
+.box input:valid ~label{
+	top: -12px;
+	color: #23A6D5;
+	font-size: 12px;
+	font-weight: bold;
+	letter-spacing: 1px;
+
+}
+
+.box input:focus,
+.box input:valid{
+	border-bottom: 2px solid #23A6D5;
+}
+.box input.btn{
+	border-bottom: none;
+	border-radius: 2%;
+}
+.box input.btn:hover{
+	background: #23D5AB;
+	
+}
+/*https://devcode.la/tutoriales/unidades-vh-vw-css*/
+        /*El viewport en un navegador en cualquier ordenador con
+        sistemas tradicionales es igual al área de la ventana,
+        o mejor dicho, al área disponible para renderizar el documento web
+        (o sea, le restamos toda la interfaz del navegador, como botones, barra de direcciones,
+        barra de menús, barras de desplazamiento, etc.) Dicho de otro modo,
+		es el área útil donde se mostrará la página web. */
+
+/*funcion linear-gradient(grado de orientacion,..., n colores)*/
+
+/*webkit,moz y animation combinan hasta 6 propiedades de animacion en una sola.
+        aqui tenemos:
+
+        *-* animation duration: aqui usamos -- 15s --
+
+        *-* "animation-timing-function" que especifica la velocidad
+            de la curva de animacion. Al usar -- Ease -- (defaul) inicia lento, luego rapido, luego lento
+        
+        *-* "animation-iteration-count" indica las veces que deberia ejecutarse (run) la animacion
+            al usar -- infinite -- hace que se ejecute infinitas veces
+		*/
+/*Gradient es el codigo de animación */
+
+/*configuramos la apariencia actual de la animación con @keyframes, fuera de body*/
+
+/* @-moz-keyframes Gradient {} firefox
+
+@-webkit-keyframes Gradient {}  Para chrmoe y zafari 
+
+@keyframes Gradient { /*cualquier otro caso ( en general) */

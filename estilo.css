@@ -1,0 +1,103 @@
+input {
+    caret-color : red;
+}
+input:focus {
+    color : blueviolet;
+    font-family: cursive;
+}
+
+div#form1{
+    background: lightpink;
+    padding: 50px;
+    border: 100px;
+    margin: 10% 10% 20% 20%;
+    align-content: center;
+    position: fixed;
+    
+    }
+
+    /*https://devcode.la/tutoriales/unidades-vh-vw-css*/
+        /*El viewport en un navegador en cualquier ordenador con
+        sistemas tradicionales es igual al área de la ventana,
+        o mejor dicho, al área disponible para renderizar el documento web
+        (o sea, le restamos toda la interfaz del navegador, como botones, barra de direcciones,
+        barra de menús, barras de desplazamiento, etc.) Dicho de otro modo,
+        es el área útil donde se mostrará la página web. */
+     /*   ↓↓    */
+    
+    body{
+        width: 100wh;
+        height: 90vh;
+        color: #fff; /*lienzo blanco*/
+
+        /*funcion gradiente(grado de orientacion,..., n colores)*/
+        background:linear-gradient(-45deg,#EE7752,#e73c7e,#23a6d5,#23d5ab);
+        /*naranja,rojo-rosa,celeste,verde agua*/
+
+        background-size: 400% 400%;
+        
+        /*webkit,moz y animation combinan hasta 6 propiedades de animacion en una sola.
+        aqui tenemos:
+
+        *-* animation duration: aqui usamos -- 15s --
+
+        *-* "animation-timing-function" que especifica la velocidad
+            de la curva de animacion. Al usar -- Ease -- (defaul) inicia lento, luego rapido, luego lento
+        
+        *-* "animation-iteration-count" indica las veces que deberia ejecutarse (run) la animacion
+            al usar -- infinite -- hace que se ejecute infinitas veces
+        */
+        -webkit-animation: Gradient, 3s, ease, infinite;
+        -moz-animation: Gradient, 3s, ease, infinite;
+        animation: Gradient, 3s, ease, infinite;        
+        
+        /*Gradient es el codigo de animación */    
+    }
+
+     /*configuramos la apariencia actual de la animación con @keyframes, fuera de body*/
+     
+@keyframes Gradient { /*cualquier otro caso ( en general) */
+        0% {
+            background-position: 0% 50%
+        }
+        50% {
+            background-position: 100% 50%
+        }
+        100%{
+            background-position: 0% 50%
+        }
+    }     
+@-webkit-keyframes Gradient { /* Para chrmoe y zafari */
+         0% {
+             background-position: 0% 50%
+         }
+         50% {
+             background-position: 100% 50%
+         }
+         100%{
+             background-position: 0% 50%
+         }
+     }
+
+     @-moz-keyframes Gradient { /*firefox*/
+        0% {
+            background-position: 0% 50%
+        }
+        50% {
+            background-position: 100% 50%
+        }
+        100%{
+            background-position: 0% 50%
+        }
+    }
+    
+
+    h1,h3,h6 {
+        font-family: 'Open Sans';
+        font-weight: 300;
+        text-align: center;
+        position: absolute;
+        top: 45%;
+        right: 0;
+        left: 0;
+    }
