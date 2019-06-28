@@ -99,14 +99,6 @@ h1, h6 {
 	text-transform: uppercase;
 	margin-bottom: 5px;
 }
-.box input[type="reset"]{
-	/*border-bottom: none;*/
-	cursor: pointer;
-	background: greenyellow;
-	color: #fff;
-	margin-bottom: 0;
-	text-transform: uppercase;
-}
 
 .box form div{
 	position: relative;	
